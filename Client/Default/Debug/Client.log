@@ -1,0 +1,2 @@
+﻿  stdafx.cpp
+c:\program files (x86)\windows kits\8.1\include\um\winnt.h(31): fatal error C1083: 포함 파일을 열 수 없습니다. 'ctype.h': No such file or directory
