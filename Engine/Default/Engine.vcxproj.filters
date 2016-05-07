@@ -1,28 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Headers">
+    <Filter Include="0xFF.Headers">
       <UniqueIdentifier>{74a0b97e-2a6d-4f42-970e-b9574c06cfd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x00.GraphicDevice">
+      <UniqueIdentifier>{e20e7578-63af-43cb-9588-bb0145a83380}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x01.SuperClass">
+      <UniqueIdentifier>{edd1a4cd-210c-4e13-9cd9-5b8c76483271}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x02.Timer">
+      <UniqueIdentifier>{ceeac1d7-ca61-4eac-a143-4e27eaebd6ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x01.SuperClass\0x00.Base">
+      <UniqueIdentifier>{708f539d-d008-4688-b0e5-2d3b25dc3507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x02.Timer\0x00.Manager">
+      <UniqueIdentifier>{64002c22-de77-4c03-86ec-821c4476c6b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x02.Timer\0x01.Timer">
+      <UniqueIdentifier>{4dd5c139-7996-431c-a741-cb1b210b31b8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Headers\engine_define.h">
-      <Filter>Headers</Filter>
+      <Filter>0xFF.Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Headers\engine_enum.h">
-      <Filter>Headers</Filter>
+      <Filter>0xFF.Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Headers\engine_include.h">
-      <Filter>Headers</Filter>
+      <Filter>0xFF.Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Headers\engine_macro.h">
-      <Filter>Headers</Filter>
+      <Filter>0xFF.Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Headers\engine_typedef.h">
-      <Filter>Headers</Filter>
+      <Filter>0xFF.Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Headers\engine_constant.h">
-      <Filter>Headers</Filter>
+      <Filter>0xFF.Headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\Codes\GraphicDevice.h">
+      <Filter>0x00.GraphicDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Codes\Base.h">
+      <Filter>0x01.SuperClass\0x00.Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Codes\Timer.h">
+      <Filter>0x02.Timer\0x01.Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\engine_function.h">
+      <Filter>0xFF.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Codes\TimeManager.h">
+      <Filter>0x02.Timer\0x00.Manager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Codes\GraphicDevice.cpp">
+      <Filter>0x00.GraphicDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\Base.cpp">
+      <Filter>0x01.SuperClass\0x00.Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\Timer.cpp">
+      <Filter>0x02.Timer\0x01.Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\TimeManager.cpp">
+      <Filter>0x02.Timer\0x00.Manager</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

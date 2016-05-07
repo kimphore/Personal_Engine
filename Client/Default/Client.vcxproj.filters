@@ -42,6 +42,9 @@
     <ClInclude Include="..\Headers\enum.h">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Desktop\Personal_Project\Client\Headers\function.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
