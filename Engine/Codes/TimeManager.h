@@ -24,18 +24,18 @@ public:
 	~CTimeManager();
 
 private:
-	typedef std::map<const TCHAR*, CTimer*> TIMEMAP;
+	typedef map<const TCHAR*, CTimer*> TIMEMAP;
 	TIMEMAP m_mapTimer;
 
 public:
 	CTimer* FindTimer(const TCHAR* pszKey);
 public:
-	HRESULT AddTimer(const TCHAR* pszKey, _int iFrameLimit);
-	void	SetFrameLimit(const TCHAR* pszKey, _int iFrameLimit);
-	void	Update(const TCHAR* pszKey);
-	_bool	UpdateFrame(const TCHAR* pszKey);
-	_float	GetTimeDelta(const TCHAR* pszKey);
-	void	ReleaseTimer(const TCHAR* pszKey);
+	HRESULT			AddTimer(const TCHAR* pszKey, _int iFrameLimit);
+	void			SetFrameLimit(const TCHAR* pszKey, _int iFrameLimit);
+	void			Update(const TCHAR* pszKey);
+	_bool			UpdateFrame(const TCHAR* pszKey);
+	const _float	GetTimeDelta(const TCHAR* pszKey);
+	void			ReleaseTimer(const TCHAR* pszKey);
 
 };
 

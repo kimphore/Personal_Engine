@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Client.h"
 #include "include.h"
+#include "engine_export.h"
 
 #define MAX_LOADSTRING 100
 
@@ -41,14 +42,37 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     MSG msg;
 
+	//TEST하자 ㅎㅎ
+
+	Engine::Add_Timer(L"Test", 60);
     // 기본 메시지 루프입니다.
-    while (GetMessage(&msg, nullptr, 0, 0))
+    
+	TCHAR szBuff[128];
+	_int iFrame = 0;
+	_float iAcc = 0.f;
+	
+	while (true)
     {
-        if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
-        {
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
-        }
+		Engine::Timer_Update(L"Test");
+		iAcc += Engine::GetTimeDelta(L"Test");
+
+		if(!Engine::Timer_FrameUpdate(L"Test"))
+			continue;
+
+		if (iAcc > 1.f)
+		{
+			SetWindowText(g_hWnd, szBuff);
+			wsprintf(szBuff, L"FPS:%d", iFrame);
+
+			iAcc = 0.f;
+			iFrame = 0;	
+		}
+		else
+		{
+			iAcc += Engine::GetTimeDelta(L"Test");
+			++iFrame;
+		}
+
     }
 
     return (int) msg.wParam;

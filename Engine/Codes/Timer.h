@@ -57,7 +57,6 @@ private://Äõ¸®¿ë
 	__int64 m_iPrevTime;
 	__int64 m_iCurrTime;
 	__int64 m_iCpuTick;
-	__int64 m_iAccumTime;
 	
 	
 };

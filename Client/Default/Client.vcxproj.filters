@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Default">
+    <Filter Include="0xFE.Default">
       <UniqueIdentifier>{cd9ce357-da23-4f0e-8916-1952b8da0296}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Headers">
+    <Filter Include="0xFF.Headers">
       <UniqueIdentifier>{1485f4db-9c5c-4330-9bd4-775811759968}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x00.MainApp">
+      <UniqueIdentifier>{2baf2c21-d447-40f6-a0ee-212e5e0cfa54}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -13,58 +16,58 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
-      <Filter>Default</Filter>
+      <Filter>0xFE.Default</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
-      <Filter>Default</Filter>
+      <Filter>0xFE.Default</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
-      <Filter>Default</Filter>
+      <Filter>0xFE.Default</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
-      <Filter>Default</Filter>
+      <Filter>0xFE.Default</Filter>
     </ClInclude>
     <ClInclude Include="..\Headers\include.h">
-      <Filter>Headers</Filter>
+      <Filter>0xFF.Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Headers\macro.h">
-      <Filter>Headers</Filter>
+      <Filter>0xFF.Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Headers\typedef.h">
-      <Filter>Headers</Filter>
+      <Filter>0xFF.Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Headers\constant.h">
-      <Filter>Headers</Filter>
+      <Filter>0xFF.Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Headers\define.h">
-      <Filter>Headers</Filter>
+      <Filter>0xFF.Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\Headers\enum.h">
-      <Filter>Headers</Filter>
+      <Filter>0xFF.Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\Desktop\Personal_Project\Client\Headers\function.h">
-      <Filter>Headers</Filter>
+      <Filter>0xFF.Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
-      <Filter>Default</Filter>
+      <Filter>0xFE.Default</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
-      <Filter>Default</Filter>
+      <Filter>0xFE.Default</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Client.ico">
-      <Filter>Default</Filter>
+      <Filter>0xFE.Default</Filter>
     </Image>
     <Image Include="small.ico">
-      <Filter>Default</Filter>
+      <Filter>0xFE.Default</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Client.rc">
-      <Filter>Default</Filter>
+      <Filter>0xFE.Default</Filter>
     </ResourceCompile>
   </ItemGroup>
 </Project>

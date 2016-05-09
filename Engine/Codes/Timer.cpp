@@ -12,7 +12,6 @@ Engine::CTimer::CTimer(_uint iFrameLimit)
 	, m_iStopTime(0)
 	, m_iPrevTime(0)
 	, m_iCurrTime(0)
-	, m_iAccumTime(0)
 {
 	SetFrameLimit(iFrameLimit);
 }
@@ -73,8 +72,9 @@ void Engine::CTimer::Update(void)
 	//int64¶û LARGET_INTEGERÀÇ LONGONGÀÌ¶û ´ëÀÀ.
 	QueryPerformanceCounter(reinterpret_cast<LARGE_INTEGER*>(&m_iCurrTime));
 	
-	m_fTimeDelta = (_float)((m_iCurrTime - m_iPrevTime) / m_iCpuTick);
+	m_fTimeDelta = (_float)(m_iCurrTime - m_iPrevTime) / (_float)m_iCpuTick;
 
+	m_fAccumTime += m_fTimeDelta;
 	m_iPrevTime = m_iCurrTime;
 
 	if (m_fTimeDelta < 0.f)
@@ -83,7 +83,7 @@ void Engine::CTimer::Update(void)
 
 _bool Engine::CTimer::UpdateFrame(void)
 {
-	if (m_fFrameTick >= m_fAccumTime)
+	if (m_fFrameTick < m_fAccumTime)
 	{
 		m_fAccumTime = 0.f;
 		return true;

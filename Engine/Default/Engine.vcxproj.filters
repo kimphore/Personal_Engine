@@ -22,6 +22,18 @@
     <Filter Include="0x02.Timer\0x01.Timer">
       <UniqueIdentifier>{4dd5c139-7996-431c-a741-cb1b210b31b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0xFE.Export_Function">
+      <UniqueIdentifier>{7f95d933-884c-477f-b05b-0be7a7326f82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x01.SuperClass\0x01.Scene">
+      <UniqueIdentifier>{861db9bd-4370-4388-a222-21c41be5e907}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x04.Renderer">
+      <UniqueIdentifier>{45dfd777-db05-43fe-b5c5-d318681bdb36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x03.Framework">
+      <UniqueIdentifier>{f801e019-7f82-4ecc-8b84-2d2a9eb00af6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Headers\engine_define.h">
@@ -57,6 +69,15 @@
     <ClInclude Include="..\Codes\TimeManager.h">
       <Filter>0x02.Timer\0x00.Manager</Filter>
     </ClInclude>
+    <ClInclude Include="..\Headers\engine_functor.h">
+      <Filter>0xFF.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Exports\engine_export.h">
+      <Filter>0xFE.Export_Function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Codes\Framework.h">
+      <Filter>0x03.Framework</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Codes\GraphicDevice.cpp">
@@ -71,5 +92,13 @@
     <ClCompile Include="..\Codes\TimeManager.cpp">
       <Filter>0x02.Timer\0x00.Manager</Filter>
     </ClCompile>
+    <ClCompile Include="..\Codes\Framework.cpp">
+      <Filter>0x03.Framework</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Exports\engine_export.inl">
+      <Filter>0xFE.Export_Function</Filter>
+    </None>
   </ItemGroup>
 </Project>
