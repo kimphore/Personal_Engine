@@ -157,6 +157,7 @@
     <ClInclude Include="..\Codes\Base.h" />
     <ClInclude Include="..\Codes\Framework.h" />
     <ClInclude Include="..\Codes\GraphicDevice.h" />
+    <ClInclude Include="..\Codes\Scene.h" />
     <ClInclude Include="..\Codes\TimeManager.h" />
     <ClInclude Include="..\Codes\Timer.h" />
     <ClInclude Include="..\Exports\engine_export.h" />
@@ -173,6 +174,7 @@
     <ClCompile Include="..\Codes\Base.cpp" />
     <ClCompile Include="..\Codes\Framework.cpp" />
     <ClCompile Include="..\Codes\GraphicDevice.cpp" />
+    <ClCompile Include="..\Codes\Scene.cpp" />
     <ClCompile Include="..\Codes\TimeManager.cpp" />
     <ClCompile Include="..\Codes\Timer.cpp" />
   </ItemGroup>

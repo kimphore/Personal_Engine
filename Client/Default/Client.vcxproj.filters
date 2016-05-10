@@ -7,7 +7,7 @@
     <Filter Include="0xFF.Headers">
       <UniqueIdentifier>{1485f4db-9c5c-4330-9bd4-775811759968}</UniqueIdentifier>
     </Filter>
-    <Filter Include="0x00.MainApp">
+    <Filter Include="0x00.GameLoop">
       <UniqueIdentifier>{2baf2c21-d447-40f6-a0ee-212e5e0cfa54}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -45,7 +45,10 @@
     <ClInclude Include="..\Headers\enum.h">
       <Filter>0xFF.Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Desktop\Personal_Project\Client\Headers\function.h">
+    <ClInclude Include="..\Codes\GameLoop.h">
+      <Filter>0x00.GameLoop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\function.h">
       <Filter>0xFF.Headers</Filter>
     </ClInclude>
   </ItemGroup>
@@ -55,6 +58,9 @@
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>0xFE.Default</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\GameLoop.cpp">
+      <Filter>0x00.GameLoop</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

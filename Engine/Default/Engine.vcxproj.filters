@@ -78,6 +78,9 @@
     <ClInclude Include="..\Codes\Framework.h">
       <Filter>0x03.Framework</Filter>
     </ClInclude>
+    <ClInclude Include="..\Codes\Scene.h">
+      <Filter>0x01.SuperClass\0x01.Scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Codes\GraphicDevice.cpp">
@@ -94,6 +97,9 @@
     </ClCompile>
     <ClCompile Include="..\Codes\Framework.cpp">
       <Filter>0x03.Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\Scene.cpp">
+      <Filter>0x01.SuperClass\0x01.Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

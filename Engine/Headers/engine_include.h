@@ -6,6 +6,7 @@
 #pragma comment(lib, "user32.lib")
 
 #include <d3d11.h>
+#include <d3dx11.h>
 #include <xnamath.h>
 #include <assert.h>
 #include <DxErr.h>

@@ -153,10 +153,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Desktop\Personal_Project\Client\Headers\function.h" />
+    <ClInclude Include="..\Codes\GameLoop.h" />
     <ClInclude Include="..\Headers\constant.h" />
     <ClInclude Include="..\Headers\define.h" />
     <ClInclude Include="..\Headers\enum.h" />
+    <ClInclude Include="..\Headers\function.h" />
     <ClInclude Include="..\Headers\include.h" />
     <ClInclude Include="..\Headers\macro.h" />
     <ClInclude Include="..\Headers\typedef.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Codes\GameLoop.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
