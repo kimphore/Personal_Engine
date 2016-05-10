@@ -43,6 +43,8 @@ _ulong Engine::CTimer::Release(void)
 	{
 		delete this;
 	}
+	else
+		--dwRefCnt;
 
 	return dwRefCnt;
 }

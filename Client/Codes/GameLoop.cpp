@@ -24,7 +24,7 @@ CGameLoop* CGameLoop::Create(void)
 _ulong CGameLoop::Release(void)
 {
 	//나중에 매니저나 이런것들 여기서 다날려줌.
-	::SafeDelete(this);
+	delete this;
 
 	return 0;
 }
