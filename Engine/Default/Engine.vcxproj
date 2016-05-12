@@ -154,9 +154,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Desktop\Personal_Project\Engine\Codes\GameObject.h" />
     <ClInclude Include="..\Codes\Base.h" />
     <ClInclude Include="..\Codes\Framework.h" />
+    <ClInclude Include="..\Codes\GameObject.h" />
     <ClInclude Include="..\Codes\GraphicDevice.h" />
     <ClInclude Include="..\Codes\Scene.h" />
     <ClInclude Include="..\Codes\TimeManager.h" />
@@ -172,9 +172,9 @@
     <ClInclude Include="..\Headers\engine_typedef.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Desktop\Personal_Project\Engine\Codes\GameObject.cpp" />
     <ClCompile Include="..\Codes\Base.cpp" />
     <ClCompile Include="..\Codes\Framework.cpp" />
+    <ClCompile Include="..\Codes\GameObject.cpp" />
     <ClCompile Include="..\Codes\GraphicDevice.cpp" />
     <ClCompile Include="..\Codes\Scene.cpp" />
     <ClCompile Include="..\Codes\TimeManager.cpp" />
