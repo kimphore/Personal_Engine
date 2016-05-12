@@ -34,6 +34,12 @@
     <Filter Include="0x03.Framework">
       <UniqueIdentifier>{f801e019-7f82-4ecc-8b84-2d2a9eb00af6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0x01.SuperClass\0x02.GameObject">
+      <UniqueIdentifier>{2046df3f-38e9-40d5-a700-f3237306631f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x01.SuperClass\0x03.Component">
+      <UniqueIdentifier>{cee4d5f7-962f-43e0-b091-7194dfddfd64}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Headers\engine_define.h">
@@ -81,6 +87,9 @@
     <ClInclude Include="..\Codes\Scene.h">
       <Filter>0x01.SuperClass\0x01.Scene</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Desktop\Personal_Project\Engine\Codes\GameObject.h">
+      <Filter>0x01.SuperClass\0x02.GameObject</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Codes\GraphicDevice.cpp">
@@ -100,6 +109,9 @@
     </ClCompile>
     <ClCompile Include="..\Codes\Scene.cpp">
       <Filter>0x01.SuperClass\0x01.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Desktop\Personal_Project\Engine\Codes\GameObject.cpp">
+      <Filter>0x01.SuperClass\0x02.GameObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

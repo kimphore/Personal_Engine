@@ -22,8 +22,7 @@
 BEGIN(Engine)
 
 class CGameObject;
-
-class CScene :public Engine::CBase
+class ENGINE_DLL CScene :public Engine::CBase
 {
 protected:
 	explicit CScene();

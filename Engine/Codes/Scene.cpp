@@ -32,6 +32,19 @@ HRESULT Engine::CScene::Initialize(ID3D11Device* pGraphicDevice, _ulong dwListCn
 
 _ulong Engine::CScene::Update(const _float fTimeDelta)
 {
+	_ulong dwRetCode = Engine::RET_NONE;
+
+	for (_int i = 0; i < m_dwListCnt; ++i) 
+	{
+		OBJLIST::iterator iter		= m_pObjLists[i].begin();
+		OBJLIST::iterator iter_end	= m_pObjLists[i].begin();
+
+		for (; iter != iter_end;)
+		{
+			//이건 나중에.
+		}
+	}
+
 	return 0;
 }
 

@@ -160,6 +160,6 @@ HRESULT Engine::CGraphicDevice::Initialize(_ulong x, _ulong y, _bool fullsize, H
 	m_tScreenViewport.MaxDepth = 0.f;
 
 	m_pContext->RSSetViewports(1, &m_tScreenViewport);
-
+	
 	return S_OK;
 }
