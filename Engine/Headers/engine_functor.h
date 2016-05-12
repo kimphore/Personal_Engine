@@ -21,5 +21,28 @@ namespace Engine
 	private:
 		const TCHAR* m_pTag;
 	};
+
+	class CMapRelease
+	{
+	public:
+		explicit CMapRelease() {};
+		~CMapRelease();
+
+	public:
+		template <typename T> void operator() (T& Pair)
+		{
+			//ReleaseÃ³¸®.
+			if (Pair->second != nullptr)
+			{
+				_ulong dwRetCnt = Pair->second->Release();
+
+				if (dwRetCnt == 0)
+				{
+					delete Pair->second;
+					Pair->second = nullptr;
+				}
+			}
+		}
+	};
 }
 #endif // engine_functor_h__

@@ -155,9 +155,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Codes\Base.h" />
+    <ClInclude Include="..\Codes\Component.h" />
     <ClInclude Include="..\Codes\Framework.h" />
     <ClInclude Include="..\Codes\GameObject.h" />
     <ClInclude Include="..\Codes\GraphicDevice.h" />
+    <ClInclude Include="..\Codes\Renderer.h" />
     <ClInclude Include="..\Codes\Scene.h" />
     <ClInclude Include="..\Codes\TimeManager.h" />
     <ClInclude Include="..\Codes\Timer.h" />
@@ -173,9 +175,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Codes\Base.cpp" />
+    <ClCompile Include="..\Codes\Component.cpp" />
     <ClCompile Include="..\Codes\Framework.cpp" />
     <ClCompile Include="..\Codes\GameObject.cpp" />
     <ClCompile Include="..\Codes\GraphicDevice.cpp" />
+    <ClCompile Include="..\Codes\Renderer.cpp" />
     <ClCompile Include="..\Codes\Scene.cpp" />
     <ClCompile Include="..\Codes\TimeManager.cpp" />
     <ClCompile Include="..\Codes\Timer.cpp" />

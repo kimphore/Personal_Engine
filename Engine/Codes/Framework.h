@@ -45,11 +45,19 @@ public://외부와의 통신을 위한 함수들
 	/*
 		외부 <-----Framework------->Scene,Renderer 내부
 	*/
+	const CXMMATRIX& GetMatrix(MATRIX_OPTION eOption);
+	const void SetMatrix(MATRIX_OPTION eOption, CXMMATRIX rMat);
 
 private:
 	ID3D11Device*	m_pGraphicDevice;
 	CScene*			m_pCurrentScene;
 	CRenderer*		m_pRenderer;
+
+private://Framework로써 저장해야 될 부분. 뷰, 플젝션행렬, 옵션값 등
+	XMFLOAT4X4					m_matView;
+	XMFLOAT4X4					m_matProj;
+
+	
 };
 
 template<typename T>

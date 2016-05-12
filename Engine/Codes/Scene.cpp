@@ -30,7 +30,7 @@ HRESULT Engine::CScene::Initialize(ID3D11Device* pGraphicDevice, _ulong dwListCn
 	m_pGraphicDevice = pGraphicDevice;
 }
 
-_ulong Engine::CScene::Update(const _float fTimeDelta)
+_ulong Engine::CScene::Update(const _float& fTimeDelta)
 {
 	_ulong dwRetCode = Engine::RET_NONE;
 

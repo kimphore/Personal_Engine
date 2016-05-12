@@ -48,3 +48,35 @@ void Engine::CFramework::Release(void)
 	Engine::SafeRelease(m_pCurrentScene);
 	Engine::SafeRelease(m_pRenderer);
 }
+
+const CXMMATRIX& Engine::CFramework::GetMatrix(MATRIX_OPTION eOption)
+{
+	XMMATRIX matRet;
+
+	switch (eOption)
+	{
+	case MAT_VIEW:
+		matRet = XMLoadFloat4x4(&m_matView);
+		break;
+	case MAT_PROJ:
+		matRet = XMLoadFloat4x4(&m_matProj);
+		break;
+	case MAT_IDEN:
+	default:
+		matRet = XMMatrixIdentity();
+		break;
+	}
+
+	return matRet;
+}
+
+const void Engine::CFramework::SetMatrix(MATRIX_OPTION eOption, CXMMATRIX rMat)
+{
+	switch (eOption)
+	{
+	case MAT_VIEW:
+		break;
+	case MAT_PROJ:
+		break;
+	}
+}

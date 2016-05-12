@@ -90,6 +90,12 @@
     <ClInclude Include="..\Codes\GameObject.h">
       <Filter>0x01.SuperClass\0x02.GameObject</Filter>
     </ClInclude>
+    <ClInclude Include="..\Codes\Component.h">
+      <Filter>0x01.SuperClass\0x03.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Codes\Renderer.h">
+      <Filter>0x04.Renderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Codes\GraphicDevice.cpp">
@@ -112,6 +118,12 @@
     </ClCompile>
     <ClCompile Include="..\Codes\GameObject.cpp">
       <Filter>0x01.SuperClass\0x02.GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\Component.cpp">
+      <Filter>0x01.SuperClass\0x03.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\Renderer.cpp">
+      <Filter>0x04.Renderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

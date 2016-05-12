@@ -29,7 +29,7 @@ private:
 
 public:
 	//Initialize는 하위 오브젝트마다 다 다르므로 ㄴㄴ;
-	virtual _ulong	Update(const _float fTimeDelta);
+	virtual _ulong	Update(const _float& fTimeDelta);
 	virtual void	Render(void) {};
 	virtual HRESULT	SetComponent(void);
 	_ulong Release(void);

@@ -23,6 +23,11 @@ HRESULT Engine::CGraphicDevice::Initialize(_ulong x, _ulong y, _bool fullsize, H
 	m_bFullSize = fullsize;
 	m_hWnd = hWnd;
 
+	XMMATRIX matIdentify = XMMatrixIdentity();
+
+	XMStoreFloat4x4(&m_matView, matIdentify);
+	XMStoreFloat4x4(&m_matProj, matIdentify);
+
 #if defined(DEBUG) || defined(_DEBUG)
 	createDeviceFlags |= D3D11_CREATE_DEVICE_DEBUG;
 #endif
@@ -163,3 +168,4 @@ HRESULT Engine::CGraphicDevice::Initialize(_ulong x, _ulong y, _bool fullsize, H
 	
 	return S_OK;
 }
+

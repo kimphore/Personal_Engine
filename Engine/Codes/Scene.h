@@ -29,7 +29,7 @@ protected:
 	~CScene(void);
 public:
 	HRESULT Initialize(ID3D11Device* pGraphicDevice, _ulong dwListCnt);
-	_ulong Update(const _float fTimeDelta);
+	_ulong Update(const _float& fTimeDelta);
 	void Render(void);
 	_ulong Release(void);
 
