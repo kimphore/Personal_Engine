@@ -37,7 +37,7 @@ public:
 public://Get,Set
 	const CComponent* GetComponent(const TCHAR* pszKey);
 private:
-	typedef map<const TCHAR*, Engine::CComponent> COMPOMAP;
+	typedef map<const TCHAR*, CComponent*> COMPOMAP;
 	COMPOMAP m_mapComponent;
 private:
 	ID3D11Device*	m_pGraphicDevice;

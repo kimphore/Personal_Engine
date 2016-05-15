@@ -1,4 +1,5 @@
 #include "Scene.h"
+#include "GameObject.h"
 
 USING(Engine)
 
@@ -41,7 +42,7 @@ _ulong Engine::CScene::Update(const _float& fTimeDelta)
 
 		for (; iter != iter_end;)
 		{
-			//이건 나중에.
+			(*iter)->Update(fTimeDelta);
 		}
 	}
 

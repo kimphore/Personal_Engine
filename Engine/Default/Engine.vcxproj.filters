@@ -40,6 +40,33 @@
     <Filter Include="0x01.SuperClass\0x03.Component">
       <UniqueIdentifier>{cee4d5f7-962f-43e0-b091-7194dfddfd64}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0x05 Resource">
+      <UniqueIdentifier>{44ffbc94-f919-4ab7-8b3c-229a4fe1d269}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x06.RendeTarget">
+      <UniqueIdentifier>{ab6605c2-053d-47e7-bb28-e65e71a60b5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x05 Resource\0x00.Manager">
+      <UniqueIdentifier>{53bcf8b6-8203-42e5-9447-bed281819bdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x01.SuperClass\0x04.Resource">
+      <UniqueIdentifier>{922e5ed8-552f-43ed-80e0-3a08ce0f5a37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x05 Resource\0x01.Resources">
+      <UniqueIdentifier>{46365f8a-d994-4de3-95ee-28c1c45a0b61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x05 Resource\0x01.Resources\0x00.Texture">
+      <UniqueIdentifier>{ee2de1ad-400a-476c-9438-922f9f8bcb8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x05 Resource\0x01.Resources\0x01.Mesh">
+      <UniqueIdentifier>{dcf69fda-fe34-4b8a-aa6a-8fdc37b5c9f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x06.RendeTarget\0x00.Manager">
+      <UniqueIdentifier>{2ef6f27d-e3a5-4cf6-b39c-cd4dcb44a1d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0x06.RendeTarget\0x01.RenderTarget">
+      <UniqueIdentifier>{562c72c6-d75f-4061-8ba7-4d6ca436ab3d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Headers\engine_define.h">
@@ -96,6 +123,12 @@
     <ClInclude Include="..\Codes\Renderer.h">
       <Filter>0x04.Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="..\Codes\RenderTarget.h">
+      <Filter>0x06.RendeTarget\0x01.RenderTarget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\engine_struct.h">
+      <Filter>0xFF.Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Codes\GraphicDevice.cpp">
@@ -124,6 +157,9 @@
     </ClCompile>
     <ClCompile Include="..\Codes\Renderer.cpp">
       <Filter>0x04.Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\RenderTarget.cpp">
+      <Filter>0x06.RendeTarget\0x01.RenderTarget</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

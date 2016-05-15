@@ -16,6 +16,17 @@ namespace Engine
 		MAT_PROJ = 2
 	};
 
+	enum RENDER_GROUP
+	{
+		RENDER_PRIORITY,
+		RENDER_ZSORT,
+		RENDER_SHADOW,
+		RENDER_ALPHA,
+		RENDER_EFFECT,
+		RENDER_UI,
+		RENDER_END
+	};
+
 }
 
 #endif // engine_enum_h__

@@ -49,6 +49,8 @@ _ulong Engine::CGameObject::Release(void)
 		for_each(m_mapComponent.begin(), m_mapComponent.end(), Engine::CMapRelease());
 	}
 
+	return dwRefCnt;
+
 }
 
 const CComponent* Engine::CGameObject::GetComponent(const TCHAR* pszKey)

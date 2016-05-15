@@ -1,4 +1,5 @@
 #include "Framework.h"
+#include "Scene.h"
 
 USING(Engine)
 
@@ -26,7 +27,8 @@ void Engine::CFramework::Update(const _float& fTimeDelta)
 {
 	//SceneUpdate
 
-	//if(m_pCurrentScene != nullptr)
+	if (m_pCurrentScene != nullptr)
+		m_pCurrentScene->Update(fTimeDelta);
 		
 }
 

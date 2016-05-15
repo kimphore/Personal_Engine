@@ -17,6 +17,7 @@
 		  랜더그룹도 나누고, 랜더타겟별로도 나누고.
 		  후처리는 뭐.. 언젠간하겠지
 		  옵션에 민감한가?
+		  싱글톤 ㄴㄴ;
  *
  * TODO: long description
  *
@@ -25,9 +26,27 @@
 
 BEGIN(Engine)
 
+class CScene;
+class CGameObject;
 class ENGINE_DLL CRenderer
 {
-	
+private:
+	explicit CRenderer(void);
+	~CRenderer(void);
+
+public:
+	static CRenderer* Create(ID3D11Device** pGraphicDevice);
+	_ulong	Release(void);
+	void	Render(void);
+	//Base on Deffered;
+public://Setter
+	void BindScene(CScene** pScene);
+private:
+	typedef list<CGameObject*> OBJLIST;
+	OBJLIST m_arrRenderGroup[RENDER_END];
+	CScene*	m_pCurrentScene;
+
+
 };
 
 END

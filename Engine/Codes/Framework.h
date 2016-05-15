@@ -2,7 +2,7 @@
 #define Framework_h__
 
 #include "engine_include.h"
-
+#include "Renderer.h"
 /*!
  * \file Framework.h
  * \date 2016/05/09 22:49
@@ -22,7 +22,6 @@
 BEGIN(Engine)
 
 class CScene;
-class CRenderer;
 class ENGINE_DLL CFramework
 {
 	DECLARE_SINGLETON(CFramework)
@@ -69,7 +68,7 @@ HRESULT Engine::CFramework::ChangeScene(T& Functor)
 	if (FAILED(Functor(&m_pCurrentScene, &m_pGraphicDevice)))
 		return E_FAIL;
 
-	//m_pRenderer->BindScene(&m_pCurrentScene);
+	m_pRenderer->BindScene(&m_pCurrentScene);
 
 	return S_OK;
 }

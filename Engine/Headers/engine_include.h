@@ -26,6 +26,7 @@ using namespace std;
 #include "engine_typedef.h"
 #include "engine_function.h"
 #include "engine_functor.h"
+#include "engine_struct.h"
 
 
 

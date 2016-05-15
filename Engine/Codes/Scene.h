@@ -34,7 +34,7 @@ public:
 	_ulong Release(void);
 
 protected:
-	typedef list<const TCHAR*, CGameObject> OBJLIST;
+	typedef list<const TCHAR*, CGameObject*> OBJLIST;
 	OBJLIST* m_pObjLists;
 	_ulong m_dwListCnt;
 
