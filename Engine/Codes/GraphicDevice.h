@@ -24,8 +24,26 @@ public:
 
 public:
 	HRESULT Initialize(_ulong x, _ulong y, _bool fullsize, HWND hWnd);
+	void BeginScene(void);
+	void EndScene(void);
+	void Release(void);
 
-public:
+public://Get Function;
+	ID3D11RenderTargetView** GetBackbuffer(void) {
+		return &m_pRenderTargetView;
+	}
+
+	ID3D11Device** GetDevice(void) {
+		return &m_pDevice;
+	}
+
+	ID3D11DepthStencilView** GetDepthBuffer(void) {
+		return &m_pDepthStencilView;
+	}
+
+	ID3D11DeviceContext** GetContext(void) {
+		return &m_pContext;
+	}
 
 private:
 	HWND						m_hWnd;

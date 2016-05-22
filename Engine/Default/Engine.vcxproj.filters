@@ -135,6 +135,9 @@
     <ClInclude Include="..\Codes\RenderGroup.h">
       <Filter>0x06.RendeTarget\0x02.RenderGroup</Filter>
     </ClInclude>
+    <ClInclude Include="..\Codes\RenderTargetMgr.h">
+      <Filter>0x06.RendeTarget\0x00.Manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Codes\GraphicDevice.cpp">
@@ -169,6 +172,9 @@
     </ClCompile>
     <ClCompile Include="..\Codes\RenderGroup.cpp">
       <Filter>0x06.RendeTarget\0x02.RenderGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\RenderTargetMgr.cpp">
+      <Filter>0x06.RendeTarget\0x00.Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

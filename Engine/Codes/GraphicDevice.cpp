@@ -165,3 +165,26 @@ HRESULT Engine::CGraphicDevice::Initialize(_ulong x, _ulong y, _bool fullsize, H
 	return S_OK;
 }
 
+void Engine::CGraphicDevice::Release(void)
+{
+	if (m_pSwapChain != nullptr)
+	{
+		m_pSwapChain->SetFullscreenState(false, NULL);
+	}
+}
+
+
+void Engine::CGraphicDevice::BeginScene(void)
+{
+	m_pContext->ClearRenderTargetView(m_pRenderTargetView, Color::blue);
+	m_pContext->ClearDepthStencilView(m_pDepthStencilView, D3D11_CLEAR_DEPTH, 1.f, 0);
+
+	return;
+}
+
+void Engine::CGraphicDevice::EndScene(void)
+{
+	m_pSwapChain->Present(0, 0);
+}
+
+

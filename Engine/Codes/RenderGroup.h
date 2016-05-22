@@ -36,7 +36,7 @@ private:
 public:
 	static CRenderGroup* Create(_int iTargetCnt);
 	HRESULT Initialize(_int iTargetCnt);
-	void AddTarget(CRenderTarget* pTarget);
+	void AddTarget(ID3D11Device** ppGraphicDevice, _ulong x, _ulong y, DXGI_FORMAT format, RenderInfo& tInfo);
 	void SetTarget(void);
 	void UnsetTarget(void);
 	void ClearTarget(void);
@@ -45,10 +45,11 @@ public:
 private:
 	typedef vector<CRenderTarget*> TARGETVECTOR;
 private:
-	TARGETVECTOR m_pTargetVector;
-	ID3D11RenderTargetView** m_pTargetArray;
+	TARGETVECTOR m_pvecTarget;
+	ID3D11RenderTargetView** m_pArrTarget;
 	_int m_iTargetCnt;
 	_int m_iCurrCnt;
+	ID3D11Device* m_pGraphicDevice;
 	ID3D11DeviceContext* m_pDeviceContext;
 	ID3D11DepthStencilView* m_pDepthStencilView;
 	ID3D11RenderTargetView* m_pBackbufferView;

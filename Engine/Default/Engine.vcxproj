@@ -162,6 +162,7 @@
     <ClInclude Include="..\Codes\Renderer.h" />
     <ClInclude Include="..\Codes\RenderGroup.h" />
     <ClInclude Include="..\Codes\RenderTarget.h" />
+    <ClInclude Include="..\Codes\RenderTargetMgr.h" />
     <ClInclude Include="..\Codes\Scene.h" />
     <ClInclude Include="..\Codes\TimeManager.h" />
     <ClInclude Include="..\Codes\Timer.h" />
@@ -185,6 +186,7 @@
     <ClCompile Include="..\Codes\Renderer.cpp" />
     <ClCompile Include="..\Codes\RenderGroup.cpp" />
     <ClCompile Include="..\Codes\RenderTarget.cpp" />
+    <ClCompile Include="..\Codes\RenderTargetMgr.cpp" />
     <ClCompile Include="..\Codes\Scene.cpp" />
     <ClCompile Include="..\Codes\TimeManager.cpp" />
     <ClCompile Include="..\Codes\Timer.cpp" />
