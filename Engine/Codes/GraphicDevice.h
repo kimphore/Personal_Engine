@@ -25,6 +25,7 @@ public:
 public:
 	HRESULT Initialize(_ulong x, _ulong y, _bool fullsize, HWND hWnd);
 
+public:
 
 private:
 	HWND						m_hWnd;

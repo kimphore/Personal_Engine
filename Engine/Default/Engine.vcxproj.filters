@@ -67,6 +67,9 @@
     <Filter Include="0x06.RendeTarget\0x01.RenderTarget">
       <UniqueIdentifier>{562c72c6-d75f-4061-8ba7-4d6ca436ab3d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0x06.RendeTarget\0x02.RenderGroup">
+      <UniqueIdentifier>{ad75d288-0596-43f2-9390-545724d21824}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Headers\engine_define.h">
@@ -129,6 +132,9 @@
     <ClInclude Include="..\Headers\engine_struct.h">
       <Filter>0xFF.Headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\Codes\RenderGroup.h">
+      <Filter>0x06.RendeTarget\0x02.RenderGroup</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Codes\GraphicDevice.cpp">
@@ -160,6 +166,9 @@
     </ClCompile>
     <ClCompile Include="..\Codes\RenderTarget.cpp">
       <Filter>0x06.RendeTarget\0x01.RenderTarget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\RenderGroup.cpp">
+      <Filter>0x06.RendeTarget\0x02.RenderGroup</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

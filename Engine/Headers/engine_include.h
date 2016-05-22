@@ -18,6 +18,7 @@ using namespace std;
 #include <list>
 #include <map>
 #include <array>
+#include <vector>
 
 #include "engine_constant.h"
 #include "engine_define.h"

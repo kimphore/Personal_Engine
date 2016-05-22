@@ -31,6 +31,8 @@ public:
 
 public:
 	HRESULT Initialize(ID3D11Device** ppGraphicDevice, _ulong x, _ulong y, DXGI_FORMAT format, RenderInfo& tInfo);
+
+	_ulong Release(void);
 private:
 	_ulong						m_iTargetSizeX;
 	_ulong						m_iTargetSizeY;
