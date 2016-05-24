@@ -11,6 +11,12 @@ namespace Engine
 		unsigned int iPosX;
 		unsigned int iPosY;
 	}RenderInfo;
+
+	//Vertex 타입별 구조체
+	namespace Vertex
+	{
+
+	}
 }
 
 #endif // engine_struct_h__

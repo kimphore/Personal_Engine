@@ -15,6 +15,7 @@
 #include <map>
 #include <array>//정적배열 STL. C++11이상부터 지원,스택에 저장
 
+#include <windows.h>
 #include <xnamath.h>//Dx11 이상에서의 Math Lib;
 #include <d3d11.h>//dx11 header
 #include <D3DX11.h>//dx11 header

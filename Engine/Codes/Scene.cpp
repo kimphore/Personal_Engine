@@ -26,6 +26,9 @@ HRESULT Engine::CScene::Initialize(ID3D11Device* pGraphicDevice, _ulong dwListCn
 	else
 	{
 		m_pObjLists = new OBJLIST[dwListCnt];
+
+		for (_ulong i = 0; i < dwListCnt; ++i)
+			m_pObjLists[i] = OBJLIST();
 	}
 
 	m_pGraphicDevice = pGraphicDevice;
@@ -35,10 +38,10 @@ _ulong Engine::CScene::Update(const _float& fTimeDelta)
 {
 	_ulong dwRetCode = Engine::RET_NONE;
 
-	for (_int i = 0; i < m_dwListCnt; ++i) 
+	for (_ulong i = 0; i < m_dwListCnt; ++i) 
 	{
-		OBJLIST::iterator iter		= m_pObjLists[i].begin();
-		OBJLIST::iterator iter_end	= m_pObjLists[i].begin();
+		auto iter		= m_pObjLists[i].begin();
+		auto iter_end	= m_pObjLists[i].end();
 
 		for (; iter != iter_end;)
 		{

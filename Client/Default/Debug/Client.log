@@ -1,2 +1,1 @@
-﻿  Client.cpp
-  Client.vcxproj -> C:\Users\topkpr\Source\Repos\Personal_Engine\Client\Default\../Bin\Client.exe
+﻿LINK : fatal error LNK1104: 'Effects11d.lib' 파일을 열 수 없습니다.

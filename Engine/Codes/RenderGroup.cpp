@@ -20,11 +20,12 @@ Engine::CRenderGroup::~CRenderGroup()
 
 }
 
-CRenderGroup* Engine::CRenderGroup::Create(void)
+CRenderGroup* Engine::CRenderGroup::Create(ID3D11Device** ppDevice, ID3D11DeviceContext** ppContext,
+	ID3D11DepthStencilView** ppDepthView, ID3D11RenderTargetView** ppBackbuffer)
 {
 	CRenderGroup* pGroup = new CRenderGroup();
 
-	if (FAILED(pGroup->Initialize()))
+	if (FAILED(pGroup->Initialize(ppDevice, ppContext, ppDepthView, ppBackbuffer)))
 	{
 		SafeDelete(pGroup);
 	}
@@ -32,14 +33,15 @@ CRenderGroup* Engine::CRenderGroup::Create(void)
 	return pGroup;
 }
 
-HRESULT Engine::CRenderGroup::Initialize(void)
+HRESULT Engine::CRenderGroup::Initialize(ID3D11Device** ppDevice, ID3D11DeviceContext** ppContext,
+	ID3D11DepthStencilView** ppDepthView, ID3D11RenderTargetView** ppBackbuffer)
 {
 	m_pArrTarget = new ID3D11RenderTargetView*[m_iTargetCnt];
 
-	m_pGraphicDevice = *Engine::CGraphicDevice::GetInstance()->GetDevice();
-	m_pDeviceContext = *Engine::CGraphicDevice::GetInstance()->GetContext();
-	m_pDepthStencilView = *Engine::CGraphicDevice::GetInstance()->GetDepthBuffer();
-	m_pBackbufferView = *Engine::CGraphicDevice::GetInstance()->GetBackbuffer();
+	m_pGraphicDevice = *ppDevice;
+	m_pDeviceContext = *ppContext;
+	m_pDepthStencilView = *ppDepthView;
+	m_pBackbufferView = *ppBackbuffer;
 
 	return S_OK;
 }

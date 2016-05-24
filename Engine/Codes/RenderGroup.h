@@ -34,8 +34,10 @@ private:
 	~CRenderGroup();
 
 public:
-	static CRenderGroup* Create(void);
-	HRESULT Initialize(void);
+	static CRenderGroup* Create(ID3D11Device** ppDevice, ID3D11DeviceContext** ppContext,
+		ID3D11DepthStencilView** ppDepthView, ID3D11RenderTargetView** ppBackbuffer);
+	HRESULT Initialize(ID3D11Device** ppDevice, ID3D11DeviceContext** ppContext,
+		ID3D11DepthStencilView** ppDepthView, ID3D11RenderTargetView** ppBackbuffer);
 	void AddTarget(ID3D11Device** ppGraphicDevice, _ulong x, _ulong y, DXGI_FORMAT format, RenderInfo& tInfo);
 	void SetTarget(void);
 	void UnsetTarget(void);

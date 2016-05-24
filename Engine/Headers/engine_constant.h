@@ -11,6 +11,12 @@ namespace Engine
 		const float blue[4] = { 0.f, 0.f, 1.f, 1.f };
 
 	}
+
+	//Vertex 타입 설정
+	namespace Vertex
+	{
+
+	}
 }
 
 #endif // engine_constant_h__

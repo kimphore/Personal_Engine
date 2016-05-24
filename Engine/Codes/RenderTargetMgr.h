@@ -29,7 +29,7 @@ public:
 	~CRenderTargetManager();
 
 public:
-	HRESULT Initialize(ID3D11Device** pDevice);
+	HRESULT Initialize(ID3D11Device** ppDevice, ID3D11DeviceContext** ppContext, ID3D11DepthStencilView** ppDepthView, ID3D11RenderTargetView** ppBackbuffer);
 	HRESULT AddRenderTarget(const TCHAR* pszGroupKey, _ulong x, _ulong y, DXGI_FORMAT format, RenderInfo& tInfo);
 	void SetRenderGroup(const TCHAR* pszGroupKey);
 	void UnsetRenderGroup(const TCHAR* pszGroupKey);
@@ -41,8 +41,11 @@ private:
 	typedef map<const TCHAR*, CRenderGroup*> RGROUPMAP;
 private:
 	RGROUPMAP m_mapGroup;
+private://필요한 내부 요소들
 	ID3D11Device* m_pGraphicDevice;
-
+	ID3D11DeviceContext* m_pDeviceContext;
+	ID3D11DepthStencilView* m_pDepthStencilView;
+	ID3D11RenderTargetView* m_pBackbufferView;
 };
 
 

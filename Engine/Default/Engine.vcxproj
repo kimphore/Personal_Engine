@@ -159,6 +159,7 @@
     <ClInclude Include="..\Codes\Framework.h" />
     <ClInclude Include="..\Codes\GameObject.h" />
     <ClInclude Include="..\Codes\GraphicDevice.h" />
+    <ClInclude Include="..\Codes\Layer.h" />
     <ClInclude Include="..\Codes\Renderer.h" />
     <ClInclude Include="..\Codes\RenderGroup.h" />
     <ClInclude Include="..\Codes\RenderTarget.h" />
@@ -183,6 +184,7 @@
     <ClCompile Include="..\Codes\Framework.cpp" />
     <ClCompile Include="..\Codes\GameObject.cpp" />
     <ClCompile Include="..\Codes\GraphicDevice.cpp" />
+    <ClCompile Include="..\Codes\Layer.cpp" />
     <ClCompile Include="..\Codes\Renderer.cpp" />
     <ClCompile Include="..\Codes\RenderGroup.cpp" />
     <ClCompile Include="..\Codes\RenderTarget.cpp" />

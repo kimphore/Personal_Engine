@@ -70,6 +70,9 @@
     <Filter Include="0x06.RendeTarget\0x02.RenderGroup">
       <UniqueIdentifier>{ad75d288-0596-43f2-9390-545724d21824}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0x01.SuperClass\0x01.Scene\0x00.Layer">
+      <UniqueIdentifier>{0b819b6b-2fe5-43e9-9614-d47650535ba7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Headers\engine_define.h">
@@ -138,6 +141,9 @@
     <ClInclude Include="..\Codes\RenderTargetMgr.h">
       <Filter>0x06.RendeTarget\0x00.Manager</Filter>
     </ClInclude>
+    <ClInclude Include="..\Codes\Layer.h">
+      <Filter>0x01.SuperClass\0x01.Scene\0x00.Layer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Codes\GraphicDevice.cpp">
@@ -175,6 +181,9 @@
     </ClCompile>
     <ClCompile Include="..\Codes\RenderTargetMgr.cpp">
       <Filter>0x06.RendeTarget\0x00.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\Layer.cpp">
+      <Filter>0x01.SuperClass\0x01.Scene\0x00.Layer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

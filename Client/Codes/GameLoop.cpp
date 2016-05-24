@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "GameLoop.h"
 //#include "engine_export.h"
 

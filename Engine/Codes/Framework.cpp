@@ -1,5 +1,6 @@
 #include "Framework.h"
 #include "Scene.h"
+#include "Renderer.h"
 
 USING(Engine)
 
@@ -20,7 +21,7 @@ Engine::CFramework::~CFramework(void)
 
 void Engine::CFramework::Initialize(ID3D11Device** pDevice)
 {
-
+	
 }
 
 void Engine::CFramework::Update(const _float& fTimeDelta)
@@ -36,7 +37,8 @@ void Engine::CFramework::Render(void)
 {
 	//실제 Render는 Renderer에서.
 
-	//if(m_pRenderer != nullptr)
+	if (m_pRenderer != nullptr)
+		m_pRenderer->Render();
 }
 
 void Engine::CFramework::Release(void)
