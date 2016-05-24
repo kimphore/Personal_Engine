@@ -29,7 +29,7 @@ CRenderTarget* Engine::CRenderTarget::Create(ID3D11Device** ppGraphicDevice, _ul
 	return pTarget;
 }
 
-HRESULT Engine::CRenderTarget::Initialize(ID3D11Device** ppGraphicDevice,n_ulong x, _ulong y, DXGI_FORMAT format, RenderInfo& tInfo)
+HRESULT Engine::CRenderTarget::Initialize(ID3D11Device** ppGraphicDevice,_ulong x, _ulong y, DXGI_FORMAT format, RenderInfo& tInfo)
 {
 	m_pGraphicDevice = *ppGraphicDevice;
 	m_iTargetSizeX = x;

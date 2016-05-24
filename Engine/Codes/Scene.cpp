@@ -38,17 +38,7 @@ _ulong Engine::CScene::Update(const _float& fTimeDelta)
 {
 	_ulong dwRetCode = Engine::RET_NONE;
 
-	for (_ulong i = 0; i < m_dwListCnt; ++i) 
-	{
-		auto iter		= m_pObjLists[i].begin();
-		auto iter_end	= m_pObjLists[i].end();
-
-		for (; iter != iter_end;)
-		{
-			(*iter)->Update(fTimeDelta);
-		}
-	}
-
+	
 	return 0;
 }
 
@@ -66,7 +56,6 @@ _ulong Engine::CScene::Release(void)
 	{
 		//여기서 나중에 삭제연산 추가해서 삭제연산.
 
-		::SafeDelete(m_pObjLists);
 		delete this;
 	}
 	else

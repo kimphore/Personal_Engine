@@ -13,6 +13,9 @@
  * \brief Scene의 SuperClass.
 		  뭐 딱히 해줄건없고, OBJECT리스트라던가
 		  기본적으로 가지고 있어야 할 것들을 가지고 있음.
+
+		  Scene에는 내부적으로 Layer_map을 가진다.
+		  그 안에 GameObject들이 들어가서 돌아감 ㅇㅇ;
  *
  * TODO: long description
  *
