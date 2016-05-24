@@ -29,6 +29,19 @@ namespace Engine
 		return dwRefCnt;
 	}
 
+	template<typename T>
+	void Swap(T& dest, T& sour)
+	{
+		T Temp = NULL;
+
+		Temp = dest;
+		dest = sour;
+		sour = Temp;
+
+		return;
+
+	}
+
 }
 
 #endif // engine_function_h__

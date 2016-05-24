@@ -27,14 +27,21 @@ private:
 	explicit CRenderTargetManager();
 public:
 	~CRenderTargetManager();
-	
+
+public:
+	HRESULT Initialize(ID3D11Device** pDevice);
+	HRESULT AddRenderTarget(const TCHAR* pszGroupKey, _ulong x, _ulong y, DXGI_FORMAT format, RenderInfo& tInfo);
+	void SetRenderGroup(const TCHAR* pszGroupKey);
+	void UnsetRenderGroup(const TCHAR* pszGroupKey);
+	void ClearRenderGroup(const TCHAR* pszGorupKey);
+	void Release(void);
 private:
 	CRenderGroup* FindGroup(const TCHAR* pszKey);
 private:
 	typedef map<const TCHAR*, CRenderGroup*> RGROUPMAP;
 private:
 	RGROUPMAP m_mapGroup;
-
+	ID3D11Device* m_pGraphicDevice;
 
 };
 
