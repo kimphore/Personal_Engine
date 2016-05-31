@@ -44,8 +44,8 @@ public://외부와의 통신을 위한 함수들
 	/*
 		외부 <-----Framework------->Scene,Renderer 내부
 	*/
-	const CXMMATRIX& GetMatrix(MATRIX_OPTION eOption);
-	const void SetMatrix(MATRIX_OPTION eOption, CXMMATRIX rMat);
+	CXMMATRIX GetMatrix(MATRIX_OPTION eOption);
+	void SetMatrix(MATRIX_OPTION eOption, CXMMATRIX rMat);
 
 private:
 	ID3D11Device*	m_pGraphicDevice;

@@ -24,7 +24,7 @@ CRenderTarget* Engine::CRenderTarget::Create(ID3D11Device** ppGraphicDevice, _ul
 	CRenderTarget* pTarget = new CRenderTarget();
 
 	if (FAILED(pTarget->Initialize(ppGraphicDevice, x, y, format, tInfo)))
-		SafeDelete(pTarget);
+		SafeRelease(pTarget);
 
 	return pTarget;
 }
@@ -119,7 +119,7 @@ _ulong Engine::CRenderTarget::Release(void)
 			m_pTargetTexture = nullptr;
 		}
 
-		SafeDelete(this);
+		delete this;
 	}
 	else
 		--dwRefCnt;

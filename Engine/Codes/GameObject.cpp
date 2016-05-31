@@ -36,7 +36,7 @@ _ulong Engine::CGameObject::Update(const _float& fTimeDelta)
 
 HRESULT Engine::CGameObject::SetComponent(void)
 {
-
+	return S_OK;
 }
 
 _ulong Engine::CGameObject::Release(void)

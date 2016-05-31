@@ -26,6 +26,8 @@ HRESULT Engine::CRenderTargetManager::Initialize(ID3D11Device** ppDevice, ID3D11
 	m_pDeviceContext = *ppContext;
 	m_pDepthStencilView = *ppDepthView;
 	m_pBackbufferView = *ppBackbuffer;
+
+	return S_OK;
 }
 
 

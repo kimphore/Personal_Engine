@@ -12,6 +12,7 @@ namespace Engine
 			Instance = NULL;
 		}
 	}
+	
 
 	template <typename T>
 	_ulong SafeRelease(T& Instance)
@@ -41,7 +42,7 @@ namespace Engine
 		return;
 
 	}
-
+	
 }
 
 #endif // engine_function_h__

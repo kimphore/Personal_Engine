@@ -53,7 +53,7 @@ void Engine::CFramework::Release(void)
 	Engine::SafeRelease(m_pRenderer);
 }
 
-const CXMMATRIX& Engine::CFramework::GetMatrix(MATRIX_OPTION eOption)
+CXMMATRIX Engine::CFramework::GetMatrix(MATRIX_OPTION eOption)
 {
 	XMMATRIX matRet;
 
@@ -74,7 +74,7 @@ const CXMMATRIX& Engine::CFramework::GetMatrix(MATRIX_OPTION eOption)
 	return matRet;
 }
 
-const void Engine::CFramework::SetMatrix(MATRIX_OPTION eOption, CXMMATRIX rMat)
+void Engine::CFramework::SetMatrix(MATRIX_OPTION eOption, CXMMATRIX rMat)
 {
 	switch (eOption)
 	{

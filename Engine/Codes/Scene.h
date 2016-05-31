@@ -25,26 +25,27 @@
 BEGIN(Engine)
 
 class CGameObject;
+class CLayer;
 class ENGINE_DLL CScene :public Engine::CBase
 {
 protected:
 	explicit CScene();
 	~CScene(void);
 public:
-	HRESULT Initialize(ID3D11Device* pGraphicDevice, _ulong dwListCnt);
+	HRESULT Initialize(ID3D11Device* pGraphicDevice);
 	_ulong Update(const _float& fTimeDelta);
 	void Render(void);
 	_ulong Release(void);
 
+public://Layer조작관련
+	CLayer* GetLayer(const TCHAR* pszKey);
+	HRESULT AddLayer(const TCHAR* pszKey);
+	list<CGameObject*>* GetObjectList(const TCHAR* pszMapKey, const TCHAR* pszListKey);
+	HRESULT AddObject(const TCHAR* pszMapKey, const TCHAR* pszListKey, CGameObject* pObject);
+
 protected:
-	typedef list<const TCHAR*, CGameObject*> OBJLIST;
-	OBJLIST* m_pObjLists;
-	_ulong m_dwListCnt;
-
-private://For Render FPS;
-	//옵션으로?
-
-private:
+	typedef map<const TCHAR*, CLayer*> LAYERMAP;
+	LAYERMAP m_mapLayer;
 	ID3D11Device* m_pGraphicDevice;
 	
 	

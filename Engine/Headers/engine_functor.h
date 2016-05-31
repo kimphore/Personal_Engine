@@ -32,15 +32,32 @@ namespace Engine
 		template <typename T> void operator() (T& Pair)
 		{
 			//Release처리.
-			if (Pair->second != nullptr)
+			if (Pair.second != nullptr)
 			{
-				_ulong dwRetCnt = Pair->second->Release();
+				Pair.second->Release();
+				Pair.second = nullptr;
+			}
+		}
+	};
 
-				if (dwRetCnt == 0)
-				{
-					delete Pair->second;
-					Pair->second = nullptr;
-				}
+	class CSingleRelease
+	{
+	/*
+	algorithm Header에 보면, 이미 Func에 넘길떄 _Func(*_First)로 넘기기에
+	이미 이터레이터가 가르키는 객체임.
+	*/
+	public:
+		explicit CSingleRelease(void) {};
+		~CSingleRelease() {};
+
+	public:
+		template<typename T>
+		void operator () (T& iter)
+		{
+			if (iter != nullptr)
+			{
+				iter->Release();
+				iter = nullptr;
 			}
 		}
 	};

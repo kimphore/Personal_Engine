@@ -27,7 +27,7 @@ CRenderGroup* Engine::CRenderGroup::Create(ID3D11Device** ppDevice, ID3D11Device
 
 	if (FAILED(pGroup->Initialize(ppDevice, ppContext, ppDepthView, ppBackbuffer)))
 	{
-		SafeDelete(pGroup);
+		SafeRelease(pGroup);
 	}
 
 	return pGroup;

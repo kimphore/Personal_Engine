@@ -17,7 +17,7 @@ Engine::CRenderer::~CRenderer(void)
 
 CRenderer* Engine::CRenderer::Create()
 {
-
+	
 }
 
 _ulong Engine::CRenderer::Release(void)
