@@ -35,7 +35,8 @@ private:
 	~CRenderer(void);
 
 public:
-	static CRenderer* Create();
+	static CRenderer* Create(ID3D11Device** pDevice, ID3D11DeviceContext** ppContext);
+	HRESULT Initialize(ID3D11Device** ppDevice, ID3D11DeviceContext** ppContext);
 	_ulong	Release(void);
 	void	Render(void);
 	void	ClearObjectGroup(void);
@@ -51,6 +52,9 @@ private:
 	OBJLIST m_arrRenderGroup[RENDER_END];
 	CScene*	m_pCurrentScene;
 
+private://Device 관련 필요한것
+	ID3D11Device* m_pGraphicDevice;
+	ID3D11DeviceContext* m_pDeviceContext;
 
 };
 
